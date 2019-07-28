@@ -1,0 +1,34 @@
+{
+    "name": "Kalam",
+    "version": "1.0",
+    "description": "Build an Extension!",
+    "permissions": [ "activeTab", "declarativeContent", "storage", "identity" ],
+    //"options_page": "options.html",
+    //"background": {
+    //    "scripts": [ "Kalam/jquery-3.3.1.min.js", "Kalam/bootstrap.min.js", "Kalam/jquery.mark.min.js", "Kalam/UseMark.js", "Kalam/jquery.ui.position.js", "Kalam/jquery.contextMenu.js", "background.js" ],
+    //    "persistent": false
+    //},
+
+    "content_scripts": [
+        {
+            "matches": [ "http://*/*", "https://*/*" ],
+            "css": [ "Kalam_Css/bootstrap.css", "Kalam_Css/Mark.css", "Kalam_Css/jquery.contextMenu.min.css" ],
+            "js": [ "Kalam/jquery-3.3.1.js", "Kalam/jquery-3.3.1.min.js", "Kalam/bootstrap.min.js", "Kalam/jquery.mark.min.js", "Kalam/jquery.ui.position.js", "Kalam/jquery.contextMenu.js", "Kalam/Email.js", "Kalam/UseMark.js" ]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/Pen_Icon_16.png",
+            "32": "images/Pen_Icon_32.png",
+            "48": "images/Pen_Icon_48.png",
+            "128": "images/Pen_Icon_128.png"
+        }
+    },
+
+    "manifest_version": 2
+
+}
+
+
+    

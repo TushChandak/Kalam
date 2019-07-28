@@ -1,0 +1,140 @@
+<!-- Copyright 2017 The Chromium Authors. All rights reserved.
+Use of this source code is governed by a BSD-style license that can be
+found in the LICENSE file. -->
+<html>
+<head>
+    <title>Kalam</title>
+    <style>
+
+
+
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #595959;
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 0 24px;
+            max-width: 960px;
+        }
+
+        /* primary header */
+
+        .primary-header {
+            padding: 24px 0;
+            text-align: center;
+            border-bottom: solid 2px #cfcfcf;
+        }
+
+        .primary-header__title {
+            color: #393939;
+            font-size: 36px;
+        }
+
+            .primary-header__title small {
+                font-size: 18px;
+                color: #898989;
+            }
+
+        /* content */
+
+        .content {
+            padding: 48px 0;
+            border-bottom: solid 2px #cfcfcf;
+        }
+
+        .content__footer {
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        /* footer */
+
+        .primary-footer {
+            padding: 24px 0;
+            color: #898989;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* tasks */
+
+        .tasks {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .task {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: solid 1px #dfdfdf;
+        }
+
+            .task:last-child {
+                border-bottom: none;
+            }
+
+    
+    </style>
+    <link rel="stylesheet" href="Kalam_Css/bootstrap.min.css">
+    <script src="Kalam/jquery-3.3.1.min.js"></script>
+    <script src="Kalam/bootstrap.min.js"></script>
+    <link href="Content/jquery.contextMenu.min.css" rel="stylesheet" />
+    <script src="Scripts/Kalam/jquery.contextMenu.js"></script>
+    <script src="Scripts/Kalam/jquery.ui.position.js"></script>
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+</head>
+<body>
+   
+    <main class="content">
+        <div class="container">
+            <ul class="tasks">
+                <li class="task" data-id="3">
+                    <div class="task__content">
+                        <a href="#" id='btnHighLighterStart'><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Start</a>
+                    </div>
+                    
+                </li>
+                <li class="task" data-id="2">
+                    <div class="task__content">
+                        <a id='btnHighLighterStop'><span class="glyphicon glyphicon-stop" aria-hidden="true"></span> Stop</a>
+                    </div>
+                    
+                </li>
+                
+            </ul>
+            
+        </div>
+    </main>
+    
+    <footer class="primary-footer">
+        <div class="container">
+            <small>&copy; Thinking Monkey</small>
+        </div>
+    </footer>
+    
+   
+    <script src="popup.js"></script>
+</body>
+
+
+
+</html>
