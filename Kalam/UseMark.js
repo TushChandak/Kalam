@@ -24,20 +24,41 @@
     ApplyMouseUp: function () {
         
         nsUserFunctions.ApplyCursor();
-        $('body').mouseup(
+        $("div").mouseup(
             function () {
                 var selection = nsUserFunctions.getSelectedText();
+                console.log(selection);
                 if (selection.length >= 3) {
+                    $("div").unmark({
+                        done: function () {
+                            $("div").mark(selection, {
+                                separateWordSearch: false,
+                                done: function () {
 
-
-                    $("div").mark(selection);
-                    console.log(selection);
-                    chrome.storage.local.get(['HighLighter'], function (result) {
-                        HighLighter = result.key;                      
+                                    currentIndex = 0;
+                                }
+                            });
+                        }
                     });
+                    console.log(selection);
                 }
             }
         );
+
+        //$('body').mouseup(
+        //    function () {
+        //        var selection = nsUserFunctions.getSelectedText();
+        //        if (selection.length >= 3) {
+
+
+        //            $("div").mark(selection);
+        //            console.log(selection);
+        //            chrome.storage.local.get(['HighLighter'], function (result) {
+        //                HighLighter = result.key;                      
+        //            });
+        //        }
+        //    }
+        //);
         nsUserFunctions.GetContextMenu();
     },
 
